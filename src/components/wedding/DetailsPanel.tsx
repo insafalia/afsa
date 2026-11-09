@@ -1,6 +1,6 @@
-import { CalendarDays, Clock3, MapPin } from "lucide-react";
+import { Clock3, MapPin } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
-import { wedding as w, weddingDate } from "@/data/wedding";
+import { wedding as w } from "@/data/wedding";
 
 const GoldHeart = () => (
   <svg viewBox="0 0 20 18" width="12" height="11" aria-hidden>
@@ -11,21 +11,6 @@ const GoldHeart = () => (
 const VLine = () => (
   <span aria-hidden className="w-px self-stretch bg-gradient-to-b from-transparent via-gold to-transparent" />
 );
-
-function DateColumn({ compact = false }: { compact?: boolean }) {
-  return (
-    <div className="flex flex-col items-center text-center">
-      <CalendarDays className="text-gold" size={compact ? 22 : 26} strokeWidth={1.4} aria-hidden />
-      <p className={`mt-1.5 leading-snug text-wine/90 ${compact ? "text-[11px]" : "text-[12.5px]"}`}>
-        {w.hijri.line1}<br />{w.hijri.line2}
-      </p>
-      <p className={`mt-1 font-semibold text-maroon ${compact ? "text-[17px]" : "text-[19px]"}`}>{weddingDate.weekday}</p>
-      <p className={`-my-1 font-bold leading-none text-maroon ${compact ? "text-[46px]" : "text-[54px]"}`}>{weddingDate.day}</p>
-      <p className={`font-semibold text-maroon ${compact ? "text-[17px]" : "text-[19px]"}`}>{weddingDate.month}</p>
-      <p className={`font-semibold tracking-[.3em] text-wine ${compact ? "text-[14px]" : "text-[16px]"}`}>{weddingDate.year}</p>
-    </div>
-  );
-}
 
 function VenueColumn({ compact = false }: { compact?: boolean }) {
   return (
@@ -61,9 +46,7 @@ function QrBlock({ horizontal = false }: { horizontal?: boolean }) {
       </span>
       <span className={`flex flex-col gap-1 ${horizontal ? "items-start" : "items-center"}`}>
         <GoldHeart />
-        <span className="text-[14px] italic leading-tight text-wine">
-          {horizontal ? w.venue.qrLabel : (<>Scan for<br />Location</>)}
-        </span>
+        <span className="text-[14px] italic leading-tight text-wine">{w.venue.qrLabel}</span>
         {horizontal && <span className="text-[11px] uppercase tracking-[.2em] text-muted">or tap to open map</span>}
       </span>
     </a>
@@ -72,18 +55,11 @@ function QrBlock({ horizontal = false }: { horizontal?: boolean }) {
 
 export default function DetailsPanel() {
   return (
-    <div className="panel relative rounded-2xl px-2.5 py-4">
-      {/* Wide screens: three columns exactly like the printed card */}
-      <div className="hidden min-[460px]:grid min-[460px]:grid-cols-[auto_auto_1fr_auto_auto] min-[460px]:items-center min-[460px]:gap-2.5">
-        <DateColumn compact /><VLine /><VenueColumn compact /><VLine /><QrBlock />
-      </div>
-      {/* Phones: date and venue side by side, QR row beneath */}
-      <div className="min-[460px]:hidden">
-        <div className="grid grid-cols-[1fr_auto_1.2fr] items-center gap-2">
-          <DateColumn /><VLine /><VenueColumn />
-        </div>
-        <span aria-hidden className="my-3 block h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent" />
-        <QrBlock horizontal />
+    <div className="panel relative rounded-2xl px-3 py-4">
+      <div className="flex items-center justify-center gap-4">
+        <VenueColumn />
+        <VLine />
+        <QrBlock />
       </div>
     </div>
   );

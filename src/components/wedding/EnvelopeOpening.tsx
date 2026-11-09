@@ -55,9 +55,9 @@ export default function EnvelopeOpening({ guest, onStart, onDone }: Props) {
         <p dir="rtl" lang="ar" className="font-arabic text-[26px] font-bold leading-[1.6] text-maroon" aria-label={w.card.bismillahLabel}>{w.card.bismillah}</p>
         <p className="mt-3 text-[11px] font-semibold uppercase tracking-[.42em] text-muted">{w.envelope.eyebrow}</p>
         <h1 className="mt-2 font-script text-[40px] leading-[1.1] text-maroon">
-          {w.couple.bride}
+          {w.couple.shortBride}
           <span className="block py-0.5 text-[26px] text-gold">&amp;</span>
-          {w.couple.groom}
+          {w.couple.shortGroom}
         </h1>
         <p className="mt-2 text-[15px] tracking-[.2em] text-wine">
           {weddingDate.day} · {weddingDate.month.toUpperCase()} · {weddingDate.year}
@@ -86,7 +86,7 @@ export default function EnvelopeOpening({ guest, onStart, onDone }: Props) {
         >
           <GoldDivider variant="heart" className="w-full" />
           <p className="mt-2 font-script text-[22px] leading-tight text-maroon">
-            {w.couple.bride}<span className="block text-[16px] text-gold">&amp;</span>{w.couple.groom}
+            {w.couple.shortBride}<span className="block text-[16px] text-gold">&amp;</span>{w.couple.shortGroom}
           </p>
           <p className="mt-1 text-[10px] uppercase tracking-[.3em] text-muted">Nikkah · Insha Allah</p>
         </motion.div>

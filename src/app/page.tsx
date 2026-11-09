@@ -8,6 +8,7 @@ import FallingPetals from "@/components/decorations/FallingPetals";
 import GoldDivider from "@/components/decorations/GoldDivider";
 import EnvelopeOpening from "@/components/wedding/EnvelopeOpening";
 import InvitationCard from "@/components/wedding/InvitationCard";
+import ScratchCard from "@/components/wedding/ScratchCard";
 import Countdown from "@/components/wedding/Countdown";
 import VenueSection from "@/components/wedding/VenueSection";
 import Gallery from "@/components/wedding/Gallery";
@@ -66,6 +67,8 @@ export default function Page() {
             </motion.p>
           )}
           <InvitationCard />
+          <GoldDivider variant="flourish" />
+          <ScratchCard />
           <GoldDivider variant="flourish" />
           <Countdown />
           <GoldDivider variant="sprig" />

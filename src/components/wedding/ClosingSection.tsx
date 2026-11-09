@@ -16,12 +16,13 @@ export default function ClosingSection() {
       <Reveal delay={0.1}><GoldDivider variant="flourish" className="mt-8" /></Reveal>
 
       <Reveal delay={0.15} className="mt-6">
-        <p className="mx-auto max-w-[340px] text-[17px] leading-relaxed text-wine">{w.closing.thanks}</p>
+        <p className="text-[18px] font-semibold text-maroon">{w.welcome.title}</p>
+        <p className="mx-auto mt-1 max-w-[320px] text-[14px] leading-snug text-wine/85">{w.welcome.place}</p>
         <p className="mt-5 text-[12px] font-semibold uppercase tracking-[.35em] text-muted">{w.closing.signoff}</p>
         <p className="mt-1 font-script leading-[1.2] text-maroon">
-          <span className="block text-[40px]">{w.couple.bride}</span>
+          <span className="block text-[40px]">{w.couple.shortBride}</span>
           <span className="block text-[28px] text-gold">&amp;</span>
-          <span className="block whitespace-nowrap text-[clamp(30px,9vw,40px)]">{w.couple.groom}</span>
+          <span className="block whitespace-nowrap text-[clamp(30px,9vw,40px)]">{w.couple.shortGroom}</span>
         </p>
       </Reveal>
 

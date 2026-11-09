@@ -27,15 +27,24 @@ export default function InvitationCard() {
           <motion.p variants={item} className="mt-2 text-[14.5px] italic text-wine/85">{w.card.bismillahMeaning}</motion.p>
           <motion.div variants={item}><GoldDivider variant="heart" className="mt-3" /></motion.div>
 
+          <motion.div variants={item} className="mt-4">
+            <p className="text-[18px] font-semibold text-maroon">{w.hosts.names}</p>
+            <p className="mx-auto mt-1 max-w-[320px] text-[13.5px] leading-snug text-wine/85">{w.hosts.address}</p>
+          </motion.div>
+
           <motion.p variants={item} className="mx-auto mt-3 max-w-[360px] text-[17px] italic leading-snug text-maroon">
             {w.card.invite.join(" ")}
           </motion.p>
 
           <motion.h1 variants={item} className="mt-4">
+            <span dir="rtl" lang="ar" className="mb-1 block font-arabic text-[30px] leading-tight text-maroon">{w.couple.brideArabic} و {w.couple.groomArabic}</span>
             <span className="shimmer block whitespace-nowrap font-script text-[clamp(42px,12.5vw,58px)] leading-[1.2]">{w.couple.bride}</span>
+            <span className="mt-1 block text-[13px] font-medium not-italic text-wine/80">{w.couple.brideLine}</span>
             <span className="sr-only"> and </span>
             <GoldDivider variant="glossy-heart" className="my-1 px-2" />
             <span className="shimmer block whitespace-nowrap font-script text-[clamp(30px,9vw,48px)] leading-[1.2]">{w.couple.groom}</span>
+            <span className="mt-1 block text-[13px] font-medium not-italic text-wine/80">{w.couple.groomLine}</span>
+            <span className="mt-0.5 block text-[13px] text-wine/75">{w.couple.groomPlace}</span>
           </motion.h1>
 
           <motion.div variants={item}><GoldDivider variant="flourish" className="mt-3" /></motion.div>
@@ -45,11 +54,8 @@ export default function InvitationCard() {
 
           <motion.div variants={item} className="mt-6">
             <GoldDivider variant="sprig" />
-            <div className="mt-2 flex items-center justify-center gap-3">
-              <span aria-hidden className="hidden h-px w-6 bg-gold/70 min-[460px]:block" />
-              <p className="text-[10px] font-semibold uppercase tracking-[.14em] text-wine min-[460px]:tracking-[.2em]">{w.card.footer}</p>
-              <span aria-hidden className="hidden h-px w-6 bg-gold/70 min-[460px]:block" />
-            </div>
+            <p className="mt-3 text-[16px] font-semibold text-maroon">{w.welcome.title}</p>
+            <p className="mx-auto mt-1 max-w-[300px] text-[13.5px] leading-snug text-wine/85">{w.welcome.place}</p>
           </motion.div>
         </motion.div>
       </div>

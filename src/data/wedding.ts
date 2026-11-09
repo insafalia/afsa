@@ -9,7 +9,31 @@ export const wedding = {
   couple: {
     bride: "N. Hafsana",
     groom: "S. Mohamed Nishad",
+    brideArabic: "حفصة",
+    groomArabic: "نيشاد",
+    shortBride: "Hafsa",
+    shortGroom: "Nishad",
+    brideLine: "Grand D/o. (late) Ibrahim & Mr. Mohamed Kutty",
+    groomLine: "S/o. Mr. Sharfudeen & Mrs. Rameeja",
+    groomPlace: "M.V. Garden, Challapatha, Kazhinjampara",
     monogram: ["H", "N"] as const,
+  },
+
+  hosts: {
+    names: "Mr. Noor Mohamed & Mrs. Haseena",
+    address: "7/24, Sugunapuram East, Mailkal Kuniyamuthur, Coimbatore - 08.",
+  },
+
+  sharedBy: {
+    label: "Sharing the Happiness from:",
+    names: "Mr. Ashik & Mrs. Hisana,",
+    place: "Afsaf",
+  },
+
+  welcome: {
+    title: "Noor and Family welcome you",
+    place: "MMA Market, Stall No 104, South Ukkadam, Cbe - 01.",
+    phones: ["9894121151", "7708670803"],
   },
 
   envelope: {
@@ -24,8 +48,8 @@ export const wedding = {
     bismillahLabel: "Bismillah ir-Rahman ir-Rahim",
     bismillahMeaning: "“In the name of Allah, the Most Beneficent and Most Merciful”",
     invite: [
-      "Cordially invite your esteemed presence with your family",
-      "and friends on the auspicious occasion of the Wedding (Nikkah)",
+      "Cordially invite your esteemed presence with family and friends",
+      "on the auspicious occasion of The Wedding (Nikkah) of our Daughter",
     ],
     inshaAllah: "Insha Allah",
     footer: "Your presence will make our day more special",
@@ -36,24 +60,24 @@ export const wedding = {
   time: "11:30",
   endTime: "14:30",
   timeZoneOffset: "+05:30",
-  hijri: { line1: "Hijri 1448,", line2: "Jumada Al-Thani, 26th" },
+  hijri: { line1: "(Hijri 1448,", line2: "Jamaadhul Aakhir, 26th)" },
   timingLabel: "Nikkah Timing",
-  timingText: "11:30 am onwards",
+  timingText: "11.30 am Onwards",
 
   venue: {
     name: "Aysha Mahal No.1",
-    addressLines: [
-      "XXC4+H3G, 10,",
-      "Palakkad - Coimbatore Rd,",
-      "Kasthuri Nagar, Sunnambu Kalvai,",
-      "Kumuram Garden, Kuniyamuthur,",
-      "Coimbatore, Tamil Nadu - 641008",
-    ],
+    addressLines: ["Palakkad Main Road,", "Kuniyamuthur,", "Coimbatore - 641008."],
     /** Exact pin from https://maps.app.goo.gl/9CmX5yxpgW3JbZbLA (XXC4+H3G Aysha Mahal) */
     mapsUrl:
       "https://www.google.com/maps/place/XXC4%2BH3G+Aysha+Mahal,+10,+Palakkad+-+Coimbatore+Rd,+Kasthuri+Nagar,+Sunnambu+kalvai,+Kumuram+Garden,+Coimbatore,+Kuniyamuthur,+Tamil+Nadu+641008/data=!4m2!3m1!1s0x3ba8597d18336405:0x1528322c91b7c1a7",
     embedUrl: `https://www.google.com/maps?q=${encodeURIComponent("XXC4+H3G Aysha Mahal, " + venueQuery)}&output=embed`,
-    qrLabel: "Scan for Location",
+    qrLabel: "Nikkah Location",
+  },
+
+  scratch: {
+    eyebrow: "A sealed note",
+    cover: "Scratch gently",
+    hint: "A save-the-date is hidden underneath",
   },
 
   countdown: {
@@ -86,9 +110,8 @@ export const wedding = {
 
   closing: {
     dua: "بَارَكَ ٱللَّٰهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
-    duaMeaning:
-      "“May Allah bless you both, shower His blessings upon you, and unite you in goodness.”",
-    thanks: "Your duas and presence mean the world to us and our families.",
+    duaMeaning: "“May Allah bless you and send blessings upon you, and bring goodness between you.”",
+    thanks: "Noor and Family welcome you",
     signoff: "With love & duas",
   },
 
