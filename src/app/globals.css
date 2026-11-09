@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  background:
+    radial-gradient(120% 80% at 10% 0%, #f9e9e3 0%, transparent 60%),
+    radial-gradient(120% 80% at 90% 100%, #f1d6cc 0%, transparent 60%),
+    #ead1c8;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.shell {
+  position: relative;
+  max-width: 480px;
+  min-height: 100svh;
+  margin: 0 auto;
+  overflow-x: hidden;
+  isolation: isolate;
+}
+@media (min-width: 520px) {
+  .shell { box-shadow: 0 0 0 1px rgba(201, 164, 92, .35), 0 30px 80px -20px rgba(92, 20, 32, .35); }
+}
+
+.font-script, .font-script * { word-spacing: .18em; }
+
+.gold-text {
+  background: linear-gradient(100deg, #9c7a3c 0%, #e8d3a2 30%, #b88d45 50%, #f3e2b8 70%, #9c7a3c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.shimmer {
+  background: linear-gradient(110deg, var(--color-maroon) 0%, var(--color-maroon) 40%, #b0475a 50%, var(--color-maroon) 60%, var(--color-maroon) 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s ease-in-out infinite;
+}
+@keyframes shimmer { 0% { background-position: 120% 0; } 60%, 100% { background-position: -120% 0; } }
+
+.panel {
+  background: linear-gradient(180deg, rgba(255, 250, 247, .72), rgba(251, 236, 230, .6));
+  border: 1px solid rgba(201, 164, 92, .7);
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, .35), 0 10px 30px -18px rgba(92, 20, 32, .45);
+  backdrop-filter: blur(2px);
+}
+
+.btn-gold {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  border-radius: 9999px; padding: .75rem 1.4rem;
+  font-weight: 600; letter-spacing: .08em; font-size: .95rem;
+  color: #fff;
+  background: linear-gradient(135deg, #8a2a36, var(--color-maroon) 45%, var(--color-wine));
+  box-shadow: 0 0 0 1px rgba(201, 164, 92, .8), 0 0 0 4px rgba(201, 164, 92, .18), 0 10px 24px -10px rgba(92, 20, 32, .7);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn-gold:hover { transform: translateY(-1px); }
+.btn-gold:active { transform: translateY(1px) scale(.98); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  border-radius: 9999px; padding: .7rem 1.25rem;
+  font-weight: 600; letter-spacing: .06em; font-size: .92rem;
+  color: var(--color-maroon);
+  background: rgba(255, 255, 255, .55);
+  border: 1px solid rgba(201, 164, 92, .9);
+  transition: background .2s ease, transform .2s ease;
+}
+.btn-outline:hover { background: rgba(255, 255, 255, .85); }
+.btn-outline:active { transform: scale(.98); }
+
+:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; border-radius: 6px; }
+
+/* Petals & sparkles */
+@keyframes petal-fall {
+  0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: .9; }
+  50% { transform: translate3d(var(--sway), 50vh, 0) rotate(180deg); }
+  90% { opacity: .85; }
+  100% { transform: translate3d(calc(var(--sway) * -0.5), 110vh, 0) rotate(360deg); opacity: 0; }
+}
+.petal { position: absolute; top: 0; animation: petal-fall var(--dur) linear var(--delay) infinite; will-change: transform; }
+
+@keyframes twinkle { 0%, 100% { opacity: 0; transform: scale(.4); } 50% { opacity: 1; transform: scale(1); } }
+.sparkle { position: absolute; border-radius: 9999px; background: radial-gradient(circle, #fff8e1 0%, #e8d3a2 40%, transparent 70%); animation: twinkle var(--dur) ease-in-out var(--delay) infinite; }
+
+@keyframes sway { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(var(--deg, 1.2deg)); } }
+.sway { animation: sway 7s ease-in-out infinite; }
+
+@keyframes seal-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(201, 164, 92, .55), 0 8px 20px -6px rgba(92, 20, 32, .6); } 50% { box-shadow: 0 0 0 14px rgba(201, 164, 92, 0), 0 8px 20px -6px rgba(92, 20, 32, .6); } }
+.seal-pulse { animation: seal-pulse 2.4s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .petal, .sparkle { display: none; }
+  .sway, .shimmer, .seal-pulse { animation: none; }
+  .shimmer { color: var(--color-maroon); background: none; }
+  html { scroll-behavior: auto; }
+}
