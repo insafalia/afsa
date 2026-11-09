@@ -2,7 +2,8 @@
  * THE ONLY FILE YOU NEED TO EDIT for content changes.
  * (Images live in /public/images, music in /public/music.)
  */
-const venueQuery = "Aysha Mahal No.1, Palakkad Main Road, Kuniyamuthur, Coimbatore 641008";
+const venueQuery =
+  "Aysha Mahal No.1, XXC4+H3G, 10, Palakkad - Coimbatore Rd, Kasthuri Nagar, Sunnambu Kalvai, Kumuram Garden, Coimbatore, Kuniyamuthur, Tamil Nadu 641008";
 
 export const wedding = {
   couple: {
@@ -41,7 +42,13 @@ export const wedding = {
 
   venue: {
     name: "Aysha Mahal No.1",
-    addressLines: ["Palakkad Main Road,", "Kuniyamuthur,", "Coimbatore - 641008."],
+    addressLines: [
+      "XXC4+H3G, 10,",
+      "Palakkad - Coimbatore Rd,",
+      "Kasthuri Nagar, Sunnambu Kalvai,",
+      "Kumuram Garden, Kuniyamuthur,",
+      "Coimbatore, Tamil Nadu - 641008",
+    ],
     mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueQuery)}`,
     embedUrl: `https://www.google.com/maps?q=${encodeURIComponent(venueQuery)}&output=embed`,
     qrLabel: "Scan for Location",
