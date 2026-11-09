@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { wedding as w, weddingDate } from "@/data/wedding";
 import RoseCorner from "@/components/decorations/RoseCorner";
@@ -25,6 +25,12 @@ function WaxSeal() {
 export default function EnvelopeOpening({ guest, onStart, onDone }: Props) {
   const [phase, setPhase] = useState<"idle" | "opening">("idle");
   const [flapBehind, setFlapBehind] = useState(false);
+  const [showCta, setShowCta] = useState(false);
+
+  useEffect(() => {
+    const id = window.setTimeout(() => setShowCta(true), 10000);
+    return () => window.clearTimeout(id);
+  }, []);
 
   const open = () => {
     if (phase !== "idle") return;
@@ -138,7 +144,19 @@ export default function EnvelopeOpening({ guest, onStart, onDone }: Props) {
           {w.envelope.greeting}{" "}
           <span className="font-semibold not-italic text-maroon">{guest || w.envelope.defaultGuest}</span>,
         </p>
-        <button type="button" onClick={open} className="btn-gold mt-4 uppercase">{w.envelope.cta}</button>
+        <motion.button
+          type="button"
+          onClick={open}
+          className="btn-gold mt-4 uppercase"
+          aria-hidden={!showCta}
+          tabIndex={showCta ? 0 : -1}
+          initial={false}
+          animate={{ opacity: showCta ? 1 : 0 }}
+          transition={{ duration: 1.8, ease }}
+          style={{ pointerEvents: showCta ? "auto" : "none" }}
+        >
+          {w.envelope.cta}
+        </motion.button>
       </motion.div>
     </motion.section>
   );
