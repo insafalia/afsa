@@ -69,10 +69,10 @@ export const wedding = {
 
   rsvp: {
     enabled: true,
-    eyebrow: "Kindly Respond",
-    title: "Will You Join Us?",
+    eyebrow: "With Love",
+    title: "Send Your Dua",
     /** WhatsApp number with country code, digits only (e.g. "919876543210"). Leave empty to let the guest pick a contact. */
-    whatsapp: "",
+    whatsapp: "918637650722",
   },
 
   closing: {
