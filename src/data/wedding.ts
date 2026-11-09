@@ -49,8 +49,10 @@ export const wedding = {
       "Kumuram Garden, Kuniyamuthur,",
       "Coimbatore, Tamil Nadu - 641008",
     ],
-    mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueQuery)}`,
-    embedUrl: `https://www.google.com/maps?q=${encodeURIComponent(venueQuery)}&output=embed`,
+    /** Exact pin from https://maps.app.goo.gl/9CmX5yxpgW3JbZbLA (XXC4+H3G Aysha Mahal) */
+    mapsUrl:
+      "https://www.google.com/maps/place/XXC4%2BH3G+Aysha+Mahal,+10,+Palakkad+-+Coimbatore+Rd,+Kasthuri+Nagar,+Sunnambu+kalvai,+Kumuram+Garden,+Coimbatore,+Kuniyamuthur,+Tamil+Nadu+641008/data=!4m2!3m1!1s0x3ba8597d18336405:0x1528322c91b7c1a7",
+    embedUrl: `https://www.google.com/maps?q=${encodeURIComponent("XXC4+H3G Aysha Mahal, " + venueQuery)}&output=embed`,
     qrLabel: "Scan for Location",
   },
 
