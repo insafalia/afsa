@@ -101,6 +101,12 @@ export const wedding = {
     image: "/images/og.jpg",
   },
 
+  /** Text sent when guests tap "Share on WhatsApp" or "Share" (the invitation link is added automatically) */
+  shareMessage:
+    "I am incredibly happy to announce that I will be getting married on December 6, 2026.\n\n" +
+    "As this special day approaches, I wanted to share my happiness with all of you. Please keep us in your thoughts and bless us as we begin this wonderful journey together.\n\n" +
+    "With love\nHafsa 🫶💞",
+
   printedCard: "/images/invitation-card.jpg",
 
   theme: {

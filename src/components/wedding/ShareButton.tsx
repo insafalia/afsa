@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Share2, Check } from "lucide-react";
-import { longDate, wedding as w } from "@/data/wedding";
+import { wedding as w } from "@/data/wedding";
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden>
@@ -11,7 +11,7 @@ const WhatsAppIcon = () => (
 
 export default function ShareButton() {
   const [copied, setCopied] = useState(false);
-  const text = `Assalamu Alaikum! You are cordially invited to the Nikkah of ${w.couple.bride} & ${w.couple.groom}, Insha Allah on ${longDate}, ${w.timingText}, at ${w.venue.name}, Coimbatore.`;
+  const text = w.shareMessage;
   const url = () => window.location.origin + window.location.pathname;
 
   const nativeShare = async () => {
