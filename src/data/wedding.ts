@@ -3,7 +3,7 @@
  * (Images live in /public/images, music in /public/music.)
  */
 const venueQuery =
-  "Aysha Mahal No.1, XXC4+H3G, 10, Palakkad - Coimbatore Rd, Kasthuri Nagar, Sunnambu Kalvai, Kumuram Garden, Coimbatore, Kuniyamuthur, Tamil Nadu 641008";
+  "Aysha Mahal No.1, Palakkad - Coimbatore Rd, Coimbatore, Kuniyamuthur, Tamil Nadu 641008";
 
 export const wedding = {
   couple: {
