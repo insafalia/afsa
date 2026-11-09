@@ -83,7 +83,7 @@ export const wedding = {
     signoff: "With love & duas",
   },
 
-  music: { src: "/music/nikkah.wav", volume: 0.5 },
+  music: { src: "/music/nikkah.mp3", volume: 0.5 },
 
   seo: {
     title: "N. Hafsana & S. Mohamed Nishad — Nikkah Invitation",
