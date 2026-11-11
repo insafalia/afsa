@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { wedding as w, weddingDate } from "@/data/wedding";
 
 const BRUSH = 32;
-const THRESHOLD = 0.58;
+const THRESHOLD = 0.29;
 const WEEK = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 
 function monthCells(iso: string) {
@@ -57,7 +57,7 @@ function SaveTheDate() {
 }
 
 type Heart = { x: number; y: number; vx: number; vy: number; life: number; max: number; size: number; spin: number; color: string };
-const HEARTS = ["#f7c5c8", "#e8d3a2", "#fff6ea", "#e39aa0", "#c9a45c"];
+const HEARTS = ["#e11d48", "#be123c", "#dc2626", "#f43f5e", "#9f1239"];
 
 function drawHeart(x: CanvasRenderingContext2D, s: number) {
   x.beginPath();
@@ -254,7 +254,7 @@ export default function ScratchCard() {
               {Array.from({ length: 14 }).map((_, i) => (
                 <motion.span
                   key={i}
-                  className="absolute text-[16px] leading-none text-[#f7c5c8]"
+                  className="absolute text-[18px] leading-none text-[#ff2d4a]"
                   style={{ left: "50%", top: "46%" }}
                   initial={{ x: 0, y: 0, scale: 0.4, opacity: 1 }}
                   animate={{
