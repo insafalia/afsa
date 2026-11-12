@@ -26,8 +26,8 @@ export const wedding = {
 
   sharedBy: {
     label: "Sharing the Happiness from:",
-    names: "Mr. Ashik & Mrs. Hisana,",
-    place: "Afsaf",
+    names: "Mr. Ashik & Mr. Afsal",
+    place: "Mrs. Hisana",
   },
 
   welcome: {
